@@ -35,6 +35,10 @@ import EmbedPage from "./pages/EmbedPage";
 import Flags from "./pages/Flags";
 import SignInPage from "./pages/SignInPage";
 import ViewPage from "./pages/ViewPage";
+import KeyGenerator from "./components/custom/KeyGenerator";
+import GetLogo from "./components/custom/GetLogo";
+import GetLogo2 from "./components/custom/GetLogo2";
+
 
 export const refreshAllowanceObj = {};
 const documentationHref = "https://github.com/NearBuilders/docs";
@@ -86,6 +90,21 @@ function App() {
               props.to = sanitizeUrl(props.to);
             }
             return <Link {...props} />;
+          },
+          GenerateKey: (props) => {
+            // Import keypom SDK
+            // Return a button that, on click, generates the key
+            return <KeyGenerator {...props} />;
+          },
+          GetLogo: () => {
+            // Import keypom SDK
+            // Return a button that, on click, generates the key
+            return <GetLogo />;
+          },
+          GetLogo2: () => {
+            // Import keypom SDK
+            // Return a button that, on click, generates the key
+            return <GetLogo2 />;
           },
         },
         config: {
