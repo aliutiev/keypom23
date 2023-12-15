@@ -2,6 +2,7 @@ const TestnetDomains = {
   "test.near.social": true,
   "127.0.0.1": true,
   "localhost": true,
+  "keypom23.vercel.app":true,
 };
 
 export const NetworkId =

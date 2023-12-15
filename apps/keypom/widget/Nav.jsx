@@ -188,6 +188,8 @@ const tabOptions = [
   { text: "Events", link: "events", disabled: false },
   { text: "Resale Events", link: "test", disabled: false },
   { text: "Create Event", link: "createevent", disabled: false },
+  { text: "My Tickets", link: "tickets", disabled: false },
+
   // { text: "Pots", link: "pots", disabled: true },
   // { text: "Feed", link: "feed", disabled: true },
 ];

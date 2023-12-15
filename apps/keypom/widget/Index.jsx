@@ -73,11 +73,12 @@ const tabContentWidget = {
   [PROJECTS_LIST_TAB]: "Project.ListPage",
   [PROJECT_DETAIL_TAB]: "Project.Detail",
   [CART_TAB]: "Cart.Checkout",
-  
+
   [TEST_TAB]: "Project.ListTicketsPage",
   [CREATE_EVENT_TAB]: "Project.CreateEvent",
-  [MY_TICKET_TAB]: "Project.Create",
+  [MY_TICKET_TAB]: "Project.ListTicketsPage2",
   [EVENTS_LIST_TAB]: "Project.ListEventsPage",
+  
 
 };
 

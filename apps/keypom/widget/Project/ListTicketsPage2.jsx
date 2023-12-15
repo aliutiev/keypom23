@@ -99,8 +99,7 @@ const CATEGORY_MAPPINGS = {
 };
 
 
-const eventById = Near.view(eventRegistryId, "get_event_information", { event_id: "moon-party" })
-let events = Near.view(eventRegistryId, "get_events", {}) // will be a vector array
+const eventById = Near.view(eventRegistryId, "get_keys_for_owner", { owner_id: 'olympihacks2.testnet' })
 
 if (!state.registeredEvents) {
   const drops = Near.view(keypomRegistryId, "get_drops_for_funder", { account_id: "minqi.testnet" });
@@ -141,24 +140,23 @@ return (
       </SectionHeader>
 
 
-      <Widget
+      {<Widget
         src={`${ownerId}/widget/Project.ListEvents`}
         props={{
-          events,
+          eventById,
           renderItem: (events) => (
-            // <div>hello event {events.name} abc</div>
+            <div>hello key {eventById.name}</div>
 
-            <Widget
-              src={`${ownerId}/widget/Project.CardEvent`}
-              props={{
-                events,
-                ...props,
-              }}
-            />
+            // <Widget
+            //   src={`${ownerId}/widget/Project.CardEvent`}
+            //   props={{
+            //     events,
+            //     ...props,
+            //   }}
+            // />
           ),
         }}
-      />
-
+      />}
 
     </ProjectsContainer>
   </>
