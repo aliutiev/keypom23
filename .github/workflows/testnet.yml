@@ -1,0 +1,17 @@
+name: Deploy Components to Testnet
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy-testnet:
+    uses: nearbuilders/bos-workspace/.github/workflows/deploy.yml@main
+    with:
+      deploy-env: "testnet"
+      app-name: "keypom"
+      deploy-account-address: ${{ vars.NEAR_ACCOUNT_TESTNET_SIGNER_ID }} 
+      signer-account-address: ${{ vars.NEAR_ACCOUNT_TESTNET_DEPLOY_ID }}
+      signer-public-key: ${{ vars.NEAR_ACCOUNT_TESTNET_PUBLIC_KEY }}
+    secrets: 
+      SIGNER_PRIVATE_KEY: ${{ secrets.NEAR_ACCOUNT_TESTNET_PRIVATE_KEY }}

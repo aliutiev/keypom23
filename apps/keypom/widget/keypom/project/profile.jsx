@@ -3,7 +3,7 @@ State.init({
 });
 // add join page to sidebar and put donate button taking from donate tab // need to fork sidebar
 
-const accountId = props.accountId ?? context.accountId ?? "keypom-marketplace.near";
+const accountId = props.accountId ?? context.accountId ?? "/*__@appAccount__*/";
 
 if (props.tab && props.tab !== state.selectedTab) {
   State.update({
@@ -12,7 +12,7 @@ if (props.tab && props.tab !== state.selectedTab) {
 }
 
 const profile = props.profile ?? Social.getr(`${accountId}/profile`);
-const accountUrl = `#/keypom-marketplace.near/widget/keypom.project.profile?accountId=${accountId}`; // need to fork own profile page
+const accountUrl = `#//*__@appAccount__*//widget/keypom.project.profile?accountId=${accountId}`; // need to fork own profile page
 
 const Wrapper = styled.div`
   padding-bottom: 48px;
