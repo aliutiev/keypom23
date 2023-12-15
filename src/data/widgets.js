@@ -1,15 +1,15 @@
 const TestnetDomains = {
-  "test.near.social": true,
+  // "test.near.social": true,
   "127.0.0.1": true,
-  "localhost": true,
-  "keypom23.vercel.app":true,
+  // "localhost": true,
+  // "keypom23.vercel.app":true,
 };
 
 export const NetworkId =
   window.location.hostname in TestnetDomains ? "testnet" : "mainnet";
 const TestnetWidgets = {
   image: "eugenethedream/widget/Image",
-  default: "a_liutiev.near/widget/Index",
+  default: "keypom-marketplace.near/widget/Index",
   viewSource: "eugenethedream/widget/WidgetSource",
   widgetMetadataEditor: "eugenethedream/widget/WidgetMetadataEditor",
   widgetMetadata: "eugenethedream/widget/WidgetMetadata",
@@ -23,7 +23,7 @@ const TestnetWidgets = {
 
 const MainnetWidgets = {
   image: "mob.near/widget/Image",
-  default: "a_liutiev.near/widget/Index",
+  default: "keypom-marketplace.near/widget/Index",
   viewSource: "mob.near/widget/WidgetSource",
   widgetMetadataEditor: "mob.near/widget/WidgetMetadataEditor",
   widgetMetadata: "mob.near/widget/WidgetMetadata",
